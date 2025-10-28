@@ -1,0 +1,339 @@
+/* Specific styles for the Mental Wellbeing Page */
+
+/* Specific styles for the SOS Emergency Page */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Prata&display=swap');
+
+
+:root {
+  --primary-color: #5d5d81; /* Example dominant color for text/elements */
+    --secondary-color: #a0a0c0; /* Lighter shade */
+    --accent-color: #c91e00; /* For emergency button */
+    --text-color: #333;
+    --light-bg: #21254e;
+    --dark-bg: #2c3e50; /* For feature cards */
+    --card-bg: #0b174d; /* Placeholder for card background color, adjust as needed */
+    --border-radius: 12px;
+}
+
+body {
+    font-family: 'Prata', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-bg);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    overflow: hidden; /* Ensures rounded corners */
+    margin-top: 40px; /* Space from top */
+    margin-bottom: 40px; /* Space from bottom */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 0px;
+}
+
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+    margin-left: 21px;
+    
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+   
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.eye{
+    margin-left: 90px;
+    margin-top: 0px;
+}
+
+.brain{
+    margin-top: -50px;
+}
+
+.page-content {
+  padding: 40px; /* Adjust padding to match your .main-content */
+  background-color: #fff; /* Ensure white background within container */
+}
+
+.page-header h1 {
+  font-size: 2.2em; /* Slightly adjusted to fit the main content flow */
+  font-weight: 700;
+  color: var(--primary-color); /* Using your primary color */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  
+  border-bottom: 2px solid #eee; /* Light border like your navbar */
+}
+
+/* Image at the start of the intro content */
+.intro-image {
+  display: block; /* Make it a block element */
+  max-width: 250px; /* Control image size */
+  height: auto;
+  margin: 0 auto 30px auto; /* Center the image and add bottom margin */
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15)); /* Subtle shadow */
+}
+
+.intro-content p {
+  font-size: 1.05em;
+  margin-bottom: 20px;
+  text-align: justify;
+  color: var(--text-color); /* Using your text color */
+  padding: 0 20px; /* Added padding to the left and right */
+}
+
+/* Quiz Section Styling */
+.quiz-section {
+  margin-top: 40px;
+}
+
+.quiz-section h2 {
+  font-size: 1.8em;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.quiz-instructions {
+  text-align: center;
+  margin-bottom: 30px;
+  font-style: italic;
+  color: #666;
+  font-size: 0.95em;
+}
+
+/* Progress Bar */
+.progress-container {
+  width: 90%; /* Slightly narrower for more appeal */
+  max-width: 700px;
+  margin: 0 auto 30px auto; /* Center it */
+  background: linear-gradient(
+    to right,
+    #e0e0e0,
+    #f0f0f0
+  ); /* Gradient background */
+  border-radius: 50px; /* More rounded */
+  height: 30px; /* Taller */
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15),
+    inset 0 1px 3px rgba(255, 255, 255, 0.5); /* More prominent shadow */
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(
+    to right,
+    #4a64e2,
+    #62a8d3
+  ); /* Appealing gradient blue */
+  border-radius: 50px; /* Match container */
+  transition: width 0.4s ease-in-out, background 0.4s ease;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#progressText {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-weight: 700; /* Bolder text */
+  font-size: 1.1em;
+  z-index: 1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Stronger shadow for text */
+}
+
+/* Question Cards */
+.question-card {
+  background-color: #fdfdff;
+  border: 1px solid #e0e0e0;
+  border-radius: var(--border-radius);
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.2s ease; /* Added transform */
+}
+
+.question-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 5);
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.question-card h3 {
+  font-size: 1.2em;
+  color: var(--text-color);
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.question-card label {
+  display: block;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 8px 0;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  color: #555;
+  border-radius: 5px; /* Rounded labels */
+}
+
+.question-card label:hover {
+  color: var(--primary-color);
+  background-color: #f0f3ff; /* Light background on hover */
+}
+
+.question-card input[type="radio"] {
+  margin-right: 10px;
+  transform: scale(1.2); /* Slightly larger radio buttons */
+  vertical-align: middle;
+  accent-color: var(--primary-color);
+}
+
+/* Quiz Results Section */
+.quiz-results {
+  background: linear-gradient(
+    to bottom right,
+    #e8f5e9,
+    #d6e9d6
+  ); /* Subtle gradient for results */
+  border: 1px solid #c8e6c9;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  text-align: center;
+  margin-top: 40px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+  display: none;
+}
+
+.quiz-results h3 {
+  color: var(--primary-color);
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+#scoreMessage {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+#resetQuiz {
+  background: linear-gradient(
+    to right,
+    #4caf50,
+    #66bb6a
+  ); /* Green gradient for reset button */
+  color: white;
+  padding: 14px 30px; /* Larger padding */
+  border: none;
+  border-radius: 8px; /* More rounded */
+  font-size: 1.1em; /* Larger font */
+  font-weight: 600; /* Bolder */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-family: 'Prata', sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for button */
+}
+
+#resetQuiz:hover {
+  background: linear-gradient(
+    to right,
+    #43a047,
+    #5cb85c
+  ); /* Darker green on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive adjustments for this specific page */
+@media (max-width: 768px) {
+
+.navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav-links ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+  .page-content {
+    padding: 20px;
+    text-align: center;
+  }
+  .page-header h1 {
+    font-size: 1.8em;
+  }
+  .intro-content p {
+    padding: 0 10px; /* Reduced padding on smaller screens */
+  }
+  .intro-image {
+    max-width: 180px; /* Smaller image on mobile */
+  }
+  .quiz-section h2 {
+    font-size: 1.6em;
+  }
+  .question-card h3 {
+    font-size: 1.1em;
+  }
+  .question-card label {
+    font-size: 0.95em;
+  }
+  .progress-container {
+    width: 95%; /* Wider on smaller screens */
+    height: 25px;
+  }
+  #progressText {
+    font-size: 1em;
+  }
+  #resetQuiz {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}

@@ -1,0 +1,248 @@
+/* Specific styles for the SOS Emergency Page */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Prata&display=swap');
+
+
+:root {
+  --primary-color: #5d5d81; /* Example dominant color for text/elements */
+    --secondary-color: #a0a0c0; /* Lighter shade */
+    --accent-color: #c91e00; /* For emergency button */
+    --text-color: #333;
+    --light-bg: #21254e;
+    --dark-bg: #2c3e50; /* For feature cards */
+    --card-bg: #0b174d; /* Placeholder for card background color, adjust as needed */
+    --border-radius: 12px;
+}
+
+body {
+    font-family: 'Prata', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-bg);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    overflow: hidden; /* Ensures rounded corners */
+    margin-top: 40px; /* Space from top */
+    margin-bottom: 40px; /* Space from bottom */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 0px;
+}
+
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+    margin-left: 21px;
+    
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+   
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.eye{
+    margin-left: 90px;
+    margin-top: 0px;
+}
+
+
+.sos-content {
+  padding: 40px; /* Adjust padding to match your main-content */
+  background-color: #fff; /* Ensure white background within container */
+  text-align: center; /* Center the text content */
+}
+
+.sos-heading {
+  font-size: 2.8em;
+  font-weight: 700;
+  color: var(--accent-color); /* Using your accent color (red for emergency) */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#first-footer{
+    margin-left: 470px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.sos-subheading {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.call-buttons-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically by default */
+  gap: 25px; /* Space between buttons */
+  max-width: 400px; /* Max width for the button stack */
+  margin: 0 auto 50px auto; /* Center the container and add bottom margin */
+}
+
+.call-button {
+  display: flex;
+  flex-direction: column; /* Icon and text stack vertically */
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  padding: 25px 20px;
+  border-radius: var(--border-radius); /* Use global border-radius */
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  min-height: 120px; /* Ensure buttons have a minimum height */
+}
+
+.call-button i {
+  font-size: 2.5em; /* Large icons */
+  margin-bottom: 10px;
+}
+
+.call-button .button-text {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.call-button .phone-number {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+/* Specific button colors */
+.call-button.primary {
+  background: linear-gradient(to right, #e74c3c, #c0392b); /* Red gradient */
+  border: 2px solid #e74c3c;
+}
+.call-button.primary:hover {
+  background: linear-gradient(to right, #c0392b, #a93226);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.call-button.secondary {
+  background: linear-gradient(to right, #3498db, #2980b9); /* Blue gradient */
+  border: 2px solid #3498db;
+}
+.call-button.secondary:hover {
+  background: linear-gradient(to right, #2980b9, #2173a7);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.call-button.accent {
+  background: linear-gradient(to right, #2ecc71, #27ae60); /* Green gradient */
+  border: 2px solid #2ecc71;
+}
+.call-button.accent:hover {
+  background: linear-gradient(to right, #27ae60, #229954);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.sos-note {
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .call-buttons-container {
+    flex-direction: row; /* Buttons side-by-side on larger screens */
+    max-width: 900px; /* Adjust max-width for horizontal layout */
+    justify-content: center; /* Center the buttons */
+  }
+
+  .call-button {
+    flex: 1; /* Distribute space evenly */
+    max-width: 280px; /* Max width for individual buttons */
+  }
+}
+
+@media (max-width: 768px) {
+
+.navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav-links ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+     #first-footer{
+       
+       margin-left: 13px;
+    margin-top: -3px;
+    margin-bottom: 51px;
+    }
+
+  .sos-heading {
+    font-size: 2.2em;
+  }
+  .sos-subheading {
+    font-size: 1em;
+  }
+  .call-button {
+    padding: 20px 15px;
+    font-size: 1em;
+    min-height: 100px;
+  }
+  .call-button i {
+    font-size: 2em;
+  }
+  .call-button .button-text {
+    font-size: 1em;
+  }
+  .call-buttons-container {
+    gap: 20px;
+  }
+}
